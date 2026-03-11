@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom'
 import Layout from './components/Layout'
 import LandingPage from './pages/LandingPage'
 import NotesPage from './pages/NotesPage'
@@ -34,7 +34,7 @@ function App() {
     if (loading) return null
 
     return (
-        <BrowserRouter>
+        <HashRouter>
             <Routes>
                 <Route
                     path="/auth"
@@ -49,7 +49,7 @@ function App() {
                     <Route path="album" element={<AlbumPage />} />
                 </Route>
             </Routes>
-        </BrowserRouter>
+        </HashRouter>
     )
 }
 
